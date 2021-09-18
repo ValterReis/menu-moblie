@@ -1,0 +1,171 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 14px;
+    font-family: Verdana, sans-serif;
+    color: white;
+
+    height: 100%;
+    background-image: linear-gradient(to bottom, #0170DA, #119EC5, #19B9B7);
+    /* border: 3px solid yellow; */
+    background-repeat: no-repeat;    
+}
+/* Moblie First */
+@media screen and (min-width: 320px) {
+    
+}
+body {
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+p {
+    text-align: justify;
+}
+
+.icone-box {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    background-color: #12A2C3;
+}
+
+.icone-box--azul {
+    position: fixed;
+    top: calc(50% - 30px);
+    left: 0;
+    z-index: 1; /*camada 1*/
+    border-radius: 0% 15% 0% 15%;
+
+    background-color: #00014B;
+}
+
+.icone-box--verde {
+    position: fixed;
+    top: 0;
+    right: -60px;
+    z-index: 3; /*camada 3*/
+    border-radius: 0% 15% 0% 15%;
+
+    background-color: #005A83;
+    transition: right 0.5s;
+}
+
+#abre-fecha {
+    display: none;
+}
+
+#abre-fecha:checked ~ nav {
+    left: 0;
+    opacity: 1;
+}
+
+#abre-fecha:checked ~ .icone-box--verde {
+    right: 65px;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: -80%;
+    width: 80%;
+    height: 100%;
+    z-index: 2; /*camada 2*/
+    font-size: 1.5rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: white;
+
+    transition: left 0.5s, opacity 0.7s;
+    opacity: 0;
+}
+
+.navbar a{
+    padding: 10px;
+    width: 80%;
+    font-size: 18px;
+    color: grey;
+    margin-bottom: 15px;
+    text-decoration: none;
+    border-left: 5px dotted blue;
+    /* border-left: 5px solid blue; */
+}
+
+/* Breakpoints */
+/* tabltes 798px */
+@media screen and (min-width:768px) {
+   
+     h1 {
+        font-size: 60px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 38px;
+    }
+}
+
+/* Desktop */
+@media screen and (min-width: 992px) {
+    body {
+        padding: 0%;
+    }
+    
+    .icone-box {
+        display: none;
+    }
+    .navbar {
+        position: static;
+        opacity: 1;
+        padding: 10% 20%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        height: auto;
+        width: 100%;
+    }
+
+    .navbar a {
+        width: auto;
+        margin-right: 10px;
+        font-size: 16px;
+        border-left: none;
+        border-bottom: 2px dotted grey;        
+    }
+
+    .navbar a {
+        border-bottom: 2px solid gray;
+    }
+}
+
+/* Telas Largas */
+@media screen and (min-width: 1200px) {
+    
+}
